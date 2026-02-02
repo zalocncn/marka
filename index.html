@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
     <!-- Calendly link widget begin -->
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <!-- Calendly link widget end -->
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -94,10 +94,10 @@
 
             <!-- CTA -->
             <div class="flex flex-col sm:flex-row items-center gap-4 w-full justify-center">
-                <button class="btn-gradient text-white text-base font-medium px-8 py-4 rounded-full shadow-lg hover:shadow-[0_10px_30px_rgba(243,90,31,0.35)] hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto min-w-[180px]">
+                <a href="#faq" class="btn-gradient text-white text-base font-medium px-8 py-4 rounded-full shadow-lg hover:shadow-[0_10px_30px_rgba(243,90,31,0.35)] hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto min-w-[180px] text-center">
                     Ver planes
-                </button>
-                <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/zalocn/30min?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="bg-white border border-[#0E0F12]/10 text-[#0E0F12] text-base font-medium px-8 py-4 rounded-full shadow-sm hover:shadow-md hover:border-[#0E0F12]/20 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto min-w-[180px] flex items-center justify-center gap-2">
+                </a>
+                <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/zalocn?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;" class="bg-white border border-[#0E0F12]/10 text-[#0E0F12] text-base font-medium px-8 py-4 rounded-full shadow-sm hover:shadow-md hover:border-[#0E0F12]/20 hover:-translate-y-1 transition-all duration-300 w-full sm:w-auto min-w-[180px] flex items-center justify-center gap-2">
                     <iconify-icon icon="solar:play-circle-linear" class="text-xl"></iconify-icon>
                     Reservar una llamada
                 </a>
@@ -152,23 +152,23 @@
                 <div>
                     <h2 class="text-3xl md:text-5xl font-semibold tracking-tight mb-8">Literalmente es tan <br>fácil como 1, 2, 3.</h2>
                     <div class="space-y-10">
-                        <div class="flex gap-6 group">
-                            <span class="text-6xl font-bold text-white/10 group-hover:text-[#F35A1F] transition-colors duration-300">01</span>
-                            <div>
+                        <div class="flex items-start gap-6 group">
+                            <span class="text-6xl font-bold text-white/10 group-hover:text-[#F35A1F] transition-colors duration-300 w-20 shrink-0 text-left leading-none">01</span>
+                            <div class="flex-1">
                                 <h3 class="text-xl font-semibold mb-2">Suscríbete</h3>
                                 <p class="text-white/60 leading-relaxed">Elige un plan y únete a Delvir. Sin contratos; cancela cuando quieras.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 group">
-                            <span class="text-6xl font-bold text-white/10 group-hover:text-[#F35A1F] transition-colors duration-300">02</span>
-                            <div>
+                        <div class="flex items-start gap-6 group">
+                            <span class="text-6xl font-bold text-white/10 group-hover:text-[#F35A1F] transition-colors duration-300 w-20 shrink-0 text-left leading-none">02</span>
+                            <div class="flex-1">
                                 <h3 class="text-xl font-semibold mb-2">Solicita</h3>
                                 <p class="text-white/60 leading-relaxed">Envía tus solicitudes de diseño en Trello. Empezaremos a trabajar de inmediato.</p>
                             </div>
                         </div>
-                        <div class="flex gap-6 group">
-                            <span class="text-6xl font-bold text-white/10 group-hover:text-[#F35A1F] transition-colors duration-300">03</span>
-                            <div>
+                        <div class="flex items-start gap-6 group">
+                            <span class="text-6xl font-bold text-white/10 group-hover:text-[#F35A1F] transition-colors duration-300 w-20 shrink-0 text-left leading-none">03</span>
+                            <div class="flex-1">
                                 <h3 class="text-xl font-semibold mb-2">Revisa</h3>
                                 <p class="text-white/60 leading-relaxed">Revisaremos los diseños hasta que estés 100% satisfecho. Sin preguntas.</p>
                             </div>
@@ -219,106 +219,61 @@
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[#0E0F12] mb-4">Niveles de membresía</h2>
-            <p class="text-[#3D3F46] text-lg">Elige el plan que mejor se adapte a tus necesidades.</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <!-- Standard Plan -->
-            <div class="bg-white rounded-2xl p-8 border border-[#0E0F12]/10 shadow-sm hover:shadow-xl transition-all duration-300 relative group">
-                <div class="mb-6">
-                    <h3 class="text-2xl font-semibold text-[#0E0F12]">Estándar</h3>
-                    <p class="text-[#6E717C] text-sm mt-2">Una solicitud a la vez. Pausa o cancela cuando quieras.</p>
-                </div>
-                
-                <div class="mb-8">
-                    <span class="text-4xl font-bold text-[#0E0F12] tracking-tight">$2,995</span>
-                    <span class="text-[#6E717C]">/mo</span>
-                </div>
-
-                <div class="space-y-4 mb-10">
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-linear" class="text-[#0E0F12]"></iconify-icon>
-                        <span class="text-[#3D3F46]">Una solicitud a la vez</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-linear" class="text-[#0E0F12]"></iconify-icon>
-                        <span class="text-[#3D3F46]">Entrega promedio en 48 horas</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-linear" class="text-[#0E0F12]"></iconify-icon>
-                        <span class="text-[#3D3F46]">Marcas ilimitadas</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-linear" class="text-[#0E0F12]"></iconify-icon>
-                        <span class="text-[#3D3F46]">Usuarios ilimitados</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-linear" class="text-[#0E0F12]"></iconify-icon>
-                        <span class="text-[#3D3F46]">Pausa o cancela cuando quieras</span>
-                    </div>
-                </div>
-
-                <button class="w-full py-4 rounded-full border border-[#0E0F12]/10 font-medium text-[#0E0F12] hover:bg-[#0E0F12] hover:text-white transition-colors duration-200">
-                    Comenzar
-                </button>
-            </div>
-
-            <!-- Pro Plan (Dark Accent) -->
-            <div class="bg-[#111114] rounded-2xl p-8 border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] relative overflow-hidden text-white transform md:-translate-y-4">
-                <div class="absolute top-0 right-0 bg-[#F35A1F] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
-                
-                <div class="mb-6 relative z-10">
-                    <h3 class="text-2xl font-semibold text-white">Pro</h3>
-                    <p class="text-white/60 text-sm mt-2">El doble de solicitudes. Para agencias en crecimiento.</p>
-                </div>
-                
-                <div class="mb-8 relative z-10">
-                    <span class="text-4xl font-bold text-white tracking-tight">$5,995</span>
-                    <span class="text-white/40">/mo</span>
-                </div>
-
-                <div class="space-y-4 mb-10 relative z-10">
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
-                        <span class="text-white/90">Dos solicitudes a la vez</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
-                        <span class="text-white/90">Entrega promedio en 48 horas</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
-                        <span class="text-white/90">Marcas ilimitadas</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
-                        <span class="text-white/90">Usuarios ilimitados</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
-                        <span class="text-white/90">Soporte prioritario</span>
-                    </div>
-                </div>
-
-                <button class="w-full py-4 rounded-full btn-gradient text-white font-medium hover:shadow-[0_0_20px_rgba(243,90,31,0.4)] transition-all duration-300 relative z-10">
-                    Comenzar
-                </button>
-            </div>
-        </div>
-    </section>
+    <div id="pricing" class="scroll-mt-32"></div>
 
     <!-- FAQ (from Designjoy, translated) -->
     <section id="faq" class="py-24 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[#0E0F12] mb-4">Preguntas frecuentes</h2>
-            <p class="text-[#3D3F46] text-lg">Respuestas rápidas a las dudas más comunes.</p>
-        </div>
+        <div class="grid md:grid-cols-2 gap-10 items-start">
+            <div>
+                <div class="bg-[#111114] rounded-2xl p-8 border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] relative overflow-hidden text-white w-full">
+                    <div class="absolute top-0 right-0 bg-[#F35A1F] text-white text-xs font-bold px-3 py-1 rounded-bl-lg">POPULAR</div>
+                    
+                    <div class="mb-6 relative z-10">
+                        <h3 class="text-2xl font-semibold text-white">Pro</h3>
+                        <p class="text-white/60 text-sm mt-2">El doble de solicitudes. Para agencias en crecimiento.</p>
+                    </div>
+                    
+                    <div class="mb-8 relative z-10">
+                        <span class="text-4xl font-bold text-white tracking-tight">$5,995</span>
+                        <span class="text-white/40">/mo</span>
+                    </div>
 
-        <div class="space-y-4">
+                    <div class="space-y-4 mb-10 relative z-10">
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
+                            <span class="text-white/90">Dos solicitudes a la vez</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
+                            <span class="text-white/90">Entrega promedio en 48 horas</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
+                            <span class="text-white/90">Marcas ilimitadas</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
+                            <span class="text-white/90">Usuarios ilimitados</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <iconify-icon icon="solar:check-circle-bold" class="text-[#F35A1F]"></iconify-icon>
+                            <span class="text-white/90">Soporte prioritario</span>
+                        </div>
+                    </div>
+
+                    <a href="https://buy.stripe.com/bJe5kDcO0fp88Pj3URbV602" class="w-full py-4 rounded-full btn-gradient text-white font-medium hover:shadow-[0_0_20px_rgba(243,90,31,0.4)] transition-all duration-300 relative z-10 text-center block">
+                        Comenzar
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <div class="text-center md:text-left mb-10">
+                    <h2 class="text-3xl md:text-5xl font-semibold tracking-tight text-[#0E0F12] mb-4">Preguntas frecuentes</h2>
+                    <p class="text-[#3D3F46] text-lg">Respuestas rápidas a las dudas más comunes.</p>
+                </div>
+
+                <div class="space-y-4">
             <details class="group bg-white rounded-2xl border border-[#0E0F12]/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <summary class="cursor-pointer select-none flex items-center justify-between gap-4 px-6 py-5">
                     <span class="text-base md:text-lg font-semibold tracking-tight text-[#0E0F12]">¿Qué tan rápido recibiré mis diseños?</span>
@@ -358,6 +313,16 @@
                 </div>
             </details>
 
+            <details class="group bg-white rounded-2xl border border-[#0E0F12]/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <summary class="cursor-pointer select-none flex items-center justify-between gap-4 px-6 py-5">
+                    <span class="text-base md:text-lg font-semibold tracking-tight text-[#0E0F12]">Ver más preguntas</span>
+                    <span class="w-9 h-9 rounded-full bg-[#F35A1F]/10 text-[#F35A1F] flex items-center justify-center border border-[#F35A1F]/20">
+                        <iconify-icon icon="solar:plus-circle-linear" class="text-xl group-open:hidden"></iconify-icon>
+                        <iconify-icon icon="solar:minus-circle-linear" class="text-xl hidden group-open:block"></iconify-icon>
+                    </span>
+                </summary>
+                <div class="px-6 pb-6">
+                    <div class="space-y-4">
             <details class="group bg-white rounded-2xl border border-[#0E0F12]/10 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
                 <summary class="cursor-pointer select-none flex items-center justify-between gap-4 px-6 py-5">
                     <span class="text-base md:text-lg font-semibold tracking-tight text-[#0E0F12]">¿Hay un límite de solicitudes que puedo hacer?</span>
@@ -500,6 +465,11 @@
                     Claro. Ya sea que necesites Delvir por un mes o por un año, la elección es tuya. Puedes volver cuando tengas nuevas necesidades de diseño.
                 </div>
             </details>
+                    </div>
+                </div>
+            </details>
+                </div>
+            </div>
         </div>
 
     </section>
@@ -513,7 +483,7 @@
                     <p class="text-white/50 max-w-md text-lg">Haz un recorrido guiado por Delvir y descubre cómo tú y tu equipo pueden cambiar para siempre la forma en que contratan diseño.</p>
                 </div>
                 <div class="flex items-center justify-start md:justify-end">
-                     <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/zalocn/30min?hide_event_type_details=1&hide_gdpr_banner=1'});return false;" class="btn-gradient px-10 py-5 rounded-full text-white font-semibold text-lg shadow-[0_0_30px_rgba(243,90,31,0.3)] hover:scale-105 transition-transform">
+                     <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/zalocn?hide_landing_page_details=1&hide_gdpr_banner=1'});return false;" class="btn-gradient px-10 py-5 rounded-full text-white font-semibold text-lg shadow-[0_0_30px_rgba(243,90,31,0.3)] hover:scale-105 transition-transform">
                         Reservar una llamada
                      </a>
                 </div>
