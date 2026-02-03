@@ -32,6 +32,24 @@
       .btn-gradient {
         background: linear-gradient(135deg, #D94816 0%, #F35A1F 60%, #FF7A3C 100%);
       }
+
+      /* Remove padding/margin around Calendly embed and iframe */
+      .calendly-embed-wrapper {
+        padding: 0;
+        margin: 0;
+      }
+      .calendly-embed-wrapper .calendly-inline-widget {
+        padding: 0 !important;
+        margin: 0 !important;
+        min-width: 100% !important;
+      }
+      .calendly-embed-wrapper .calendly-inline-widget iframe {
+        padding: 0 !important;
+        margin: 0 !important;
+        border: none !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
     </style>
   </head>
   <body
@@ -86,9 +104,9 @@
     <main class="px-6 pb-24">
       <div class="max-w-5xl mx-auto">
         <div
-          class="bg-white rounded-2xl p-6 md:p-8 border border-[#0E0F12]/10 shadow-sm"
+          class="bg-white rounded-2xl border border-[#0E0F12]/10 shadow-sm overflow-hidden"
         >
-          <div class="mb-6 md:mb-8">
+          <div class="p-6 md:p-8">
             <h2 class="text-xl md:text-2xl font-semibold tracking-tight text-[#0E0F12]">
               Empezamos justo después de la llamada
             </h2>
@@ -98,7 +116,7 @@
               solicitud el mismo día hábil.
             </p>
           </div>
-          <div class="rounded-xl overflow-hidden border border-[#0E0F12]/10 bg-white">
+          <div class="calendly-embed-wrapper">
             <!-- Calendly inline widget begin -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/fieldswill/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffffff&primary_color=f35a1f" style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
